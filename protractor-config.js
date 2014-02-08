@@ -1,3 +1,4 @@
+require('coffee-script').register();
 // A reference configuration file.
 exports.config = {
   // The address of a running selenium server.
@@ -9,7 +10,7 @@ exports.config = {
   // Spec patterns are relative to the location of this config.
   // For example: 'spec/*_spec.js',
   specs: [
-    'test/e2e/*_spec.js'
+    'test/e2e/*_spec.coffee'
   ],
 
   // ----- Capabilities to be passed to the webdriver instance ----
