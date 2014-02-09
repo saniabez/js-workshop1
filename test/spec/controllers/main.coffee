@@ -15,9 +15,14 @@ describe 'Controller: MainCtrl', () ->
       $scope: scope
     }
 
-  it 'todoList to be defined' , () ->
+  it 'todoList to be defined' ,() ->
     expect(scope.todoList).toBeDefined() 
 
   it 'should attach a list of todoList to the scope' , () ->
-    expect(scope.todoList.length).toBe 2
+    expect(scope.todoList.length).toBe 3
+
+  it 'method add should be defined' ,() ->
+    scope.newTask = 'test'
+    scope.add()
+    expect(scope.todoList.length).toBe 3
 
