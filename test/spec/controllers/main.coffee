@@ -15,5 +15,9 @@ describe 'Controller: MainCtrl', () ->
       $scope: scope
     }
 
-  it 'should attach a list of awesomeThings to the scope', () ->
-    expect(scope.awesomeThings.length).toBe 3
+  it 'todoList to be defined' , () ->
+    expect(scope.todoList).toBeDefined() 
+
+  it 'should attach a list of todoList to the scope' , () ->
+    expect(scope.todoList.length).toBe 2
+

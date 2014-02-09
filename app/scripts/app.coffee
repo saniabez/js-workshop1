@@ -1,6 +1,6 @@
 'use strict'
 
-angular.module('devApp', [
+window.app = angular.module('devApp', [
   'ngResource',
   'ngSanitize',
   'ngRoute'
