@@ -1,6 +1,6 @@
 describe "angularjs homepage", ->
   it "should greet the named user", ->
-    browser.get "http://www.angularjs.org"
+    browser.get "/"
     element(By.model("yourName")).sendKeys "Julie"
     greeting = element(By.binding("yourName"))
     expect(greeting.getText()).toEqual "Hello Julie!"
@@ -8,7 +8,7 @@ describe "angularjs homepage", ->
   describe "todo list", ->
     todoList = undefined
     beforeEach ->
-      browser.get "http://www.angularjs.org"
+      browser.get "/"
       todoList = element.all(By.repeater("todo in todos"))
 
     it "should list todos", ->
