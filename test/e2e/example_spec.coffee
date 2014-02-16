@@ -12,13 +12,13 @@ describe "angularjs homepage", ->
       todoList = element.all(By.repeater("thing in awesomeThings"))
 
     it "should list todos", ->
-      expect(todoList.count()).toEqual 3
-      expect(todoList.get(1).getText()).toEqual "AngularJS"
+      expect(todoList.count()).toEqual 2
+      expect(todoList.get(1).getText()).toEqual "phone2"
 
-    it "should add a todo", ->
-      addTodo = element(By.model("newTask"))
-      addButton = element(By.css("[value=\"add\"]"))
-      addTodo.sendKeys "write a protractor test"
-      addButton.click()
-      expect(todoList.count()).toEqual 4
-      expect(todoList.get(3).getText()).toEqual "write a protractor test"
+    #it "should add a todo", ->
+     # addTodo = element(By.model("newTask"))
+     # addButton = element(By.css("[value=\"add\"]"))
+    #  addTodo.sendKeys "write a protractor test"
+    #  addButton.click()
+     # expect(todoList.count()).toEqual 3
+    #  expect(todoList.get(3).getText()).toEqual "write a protractor test"

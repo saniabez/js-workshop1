@@ -1,17 +1,9 @@
 'use strict'
 
-app.controller 'MainCtrl', ['$scope', ($scope) ->
+app.controller 'MainCtrl', ['$scope', 'tasks', ($scope, tasks) ->
     $scope.newTask = ''
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate'
-      'AngularJS'
-      'Karma'
-    ]
-    $scope.todoList = [
-      '1'
-      '2'
-      '3'
-    ]
+    $scope.awesomeThings = tasks.list
+    $scope.todoList = tasks.list
 
     $scope.add = ->
       $scope.awesomeThings.push $scope.newTask
